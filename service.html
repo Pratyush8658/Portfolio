@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Services | Portfolio</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="service.css">
+</head>
+<body>
+
+    <div class="mobile-menu-btn">
+        <i class='bx bx-menu'></i>
+    </div>
+    
+    <nav class="navbar">
+        <a href="index.html" class="logo">Portfolio</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html">Portfolio</a></li>
+            <li class="active"><a href="#">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="bars-animation">
+        <div class="bar" style="--i:6;"></div>
+        <div class="bar" style="--i:5;"></div>
+        <div class="bar" style="--i:4;"></div>
+        <div class="bar" style="--i:3;"></div>
+        <div class="bar" style="--i:2;"></div>
+        <div class="bar" style="--i:1;"></div>
+    </div>
+
+    <section class="service-section">
+        <h1>My Services</h1>
+        <p>I offer full-cycle development services for web-based projects building. Here's what I can help you with:</p>
+
+        <h2>🖥️ Frontend Development</h2>
+        <ul>
+            <li>Responsive designs using HTML5, CSS3, JavaScript</li>
+            <li>Cross-browser and device testing</li>
+        </ul>
+
+        <h2>💻 Backend Development</h2>
+        <ul>
+            <li>API Handling using Python Flask or Java</li>
+            <li>Database connection & management</li>
+            <li>Secure authentication and login systems</li>
+        </ul>
+
+        <h2>🛒 Full-stack Projects</h2>
+        <ul>
+            <li>Real-time translator, E-commerce apps, OTT clones</li>
+            <li>Admin dashboard and user role systems</li>
+            <li>Custom student or client portals</li>
+        </ul>
+
+        <h2>📄 Custom Portfolios</h2>
+        <ul>
+            <li>One-page, animated personal websites</li>
+            <li>Resume integration and download feature</li>
+            <li>Social media & contact linking</li>
+        </ul>
+    </section>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.querySelector('i').classList.toggle('bx-x');
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.querySelector('i').classList.remove('bx-x');
+            });
+        });
+    </script>
+</body>
+</html>

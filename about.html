@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>About | Portfolio</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+   <link rel="stylesheet" href="about.css">
+</head>
+<body>
+
+    <div class="mobile-menu-btn">
+        <i class='bx bx-menu'></i>
+    </div>
+    
+    <nav class="navbar">
+        <a href="index.html" class="logo">Portfolio</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="#">About</a></li>
+            <li><a href="index.html">Portfolio</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="bars-animation">
+        <div class="bar" style="--i:6;"></div>
+        <div class="bar" style="--i:5;"></div>
+        <div class="bar" style="--i:4;"></div>
+        <div class="bar" style="--i:3;"></div>
+        <div class="bar" style="--i:2;"></div>
+        <div class="bar" style="--i:1;"></div>
+    </div>
+
+    <section class="about-section">
+        <h1>About Me</h1>
+        <p>
+            I'm <span class="highlight">Pratyush Kumar Mohapatra</span>, currently pursuing <span class="highlight">B.Tech in Computer Science and Engineering</span> from <span class="highlight">Gandhi Institute of Engineering and Technology University</span>. I am passionate about developing real-time web applications, backend logic, and user-friendly interfaces.
+        </p>
+
+        <h2>🎓 Academic Background</h2>
+        <ul>
+            <li>B.Tech CSE – GIET University (2023 - 2027)</li>
+            <li>Class 12 – Science, BSE Board</li>
+            <li>Class 10 – CHSE Board</li>
+        </ul>
+
+        <h2>💼 Projects</h2>
+        <ul>
+            <li><strong>Real-Time Translator:</strong> A speech-to-speech translator using Flask, JavaScript, and Google APIs with a premium user module and Email-based password reset.</li>
+            <li><strong>SnakeGame:</strong> A snake game website using Html,CSS and Js that have some different gaming modes.</li>
+            <li><strong>Cart Easy (E-commerce):</strong> A shopping website with user authentication, admin dashboard, cart system, and full backend logic.</li>
+        </ul>
+
+        <h2>🌟 Skills</h2>
+        <ul>
+            <li><span class="highlight">Frontend:</span> HTML, CSS, JavaScript</li>
+            <li><span class="highlight">Backend:</span> Java, Python</li>
+            <li><span class="highlight">Database:</span> MySQL</li>
+            <li><span class="highlight">Tools:</span> GitHub, VS Code</li>
+        </ul>
+
+        <h2>🎯 Career Goal</h2>
+        <p>
+            To become a proficient <span class="highlight">Full Stack Developer</span> who can build modern, scalable, and meaningful applications that solve real-world problems and impact users positively.
+        </p>
+    </section>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.querySelector('i').classList.toggle('bx-x');
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.querySelector('i').classList.remove('bx-x');
+            });
+        });
+    </script>
+</body>
+</html>

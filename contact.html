@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Contact | Portfolio</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+    <div class="mobile-menu-btn">
+        <i class='bx bx-menu'></i>
+    </div>
+    
+    <nav class="navbar">
+        <a href="index.html" class="logo">Portfolio</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html">Portfolio</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li class="active"><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="bars-animation">
+        <div class="bar" style="--i:6;"></div>
+        <div class="bar" style="--i:5;"></div>
+        <div class="bar" style="--i:4;"></div>
+        <div class="bar" style="--i:3;"></div>
+        <div class="bar" style="--i:2;"></div>
+        <div class="bar" style="--i:1;"></div>
+    </div>
+
+    <section class="contact-section">
+        <h1>Get in Touch</h1>
+        <p>Feel free to contact me if you need help with a project, want to collaborate, or just want to say hi!</p>
+
+        <div class="contact-links">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=pratyushmohapatra24@gmail.com" target="_blank"><i class='bx bx-envelope'></i> Email</a>
+            <a href="https://github.com/Pratyush8658" target="_blank"><i class='bx bxl-github'></i> GitHub</a>
+            <a href="https://www.linkedin.com/in/pratyush-kumar-mohapatra-114a97309/" target="_blank"><i class='bx bxl-linkedin'></i> LinkedIn</a>
+            <a href="#"><i class='bx bxl-youtube'></i> YouTube</a>
+        </div>
+    </section>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.querySelector('i').classList.toggle('bx-x');
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.querySelector('i').classList.remove('bx-x');
+            });
+        });
+    </script>
+</body>
+</html>
